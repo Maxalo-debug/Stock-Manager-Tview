@@ -1,4 +1,4 @@
-package main
+package internal
 
 import (
 	"encoding/json"
@@ -19,6 +19,9 @@ type Stock struct {
 	Name     string    `json:"name"`
 	Symbol   string    `json:"symbol"`
 	BoughtAt time.Time `json:"boughtAt"`
+}
+type ApiData struct {
+	Results []Stock `json:"results"`
 }
 
 type Manager []Stock
